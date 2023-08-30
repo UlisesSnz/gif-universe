@@ -94,8 +94,8 @@ npm test
 ## Authors
 **Ulises Sánchez**
 
-- Email me at [ulises.sanchez.guzman@outlook.com](mailto:ulises.sanchez.guzman@outlook.com)
-- Git Hub [@UlisesSnz](https://github.com/UlisesSnz)
+- Email [ulises.sanchez.guzman@outlook.com](mailto:ulises.sanchez.guzman@outlook.com)
+- GitHub [@UlisesSnz](https://github.com/UlisesSnz)
 - LinkedIn [@UlisesSnz](https://www.linkedin.com/in/ulisessanchez/)
 
 ## License
