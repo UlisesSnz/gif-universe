@@ -1,5 +1,6 @@
-import { useEffect, useState } from "react";
-import { getGifs } from "../helpers/dataGifs";
+import PropTypes from 'prop-types';
+import { useEffect, useState } from 'react';
+import { getGifs } from '../helpers/getGifs';
 
 export const useFetchGifs = (category) => {
     
@@ -8,9 +9,7 @@ export const useFetchGifs = (category) => {
 
     const getDataGifs = async() => {
         setDataGifs( await getGifs(category) );
-        setTimeout(() => {
-            setIsLoading(false);
-        }, 1000);
+        setIsLoading(false);
     }
 
     useEffect(() => {
@@ -21,4 +20,8 @@ export const useFetchGifs = (category) => {
         dataGifs,
         isLoading,
     }
+}
+
+useFetchGifs.propTypes = {
+    category: PropTypes.string.isRequired,
 }

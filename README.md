@@ -85,12 +85,18 @@ git push origin feature/my-new-feature
 
 8. **Review and Merge**: I'll review your PR, provide feedback if necessary, and consider merging it into the main branch.
 
+## How to run tests
+run:
+```bash
+npm test
+```
+
 ## Authors
 **Ulises Sánchez**
 
 - Email me at [ulises.sanchez.guzman@outlook.com](mailto:ulises.sanchez.guzman@outlook.com)
 - Git Hub [@UlisesSnz](https://github.com/UlisesSnz)
-- LinkedIn [@UlisesSnz](https://www.linkedin.com/in/ulises-snz/)
+- LinkedIn [@UlisesSnz](https://www.linkedin.com/in/ulisessanchez/)
 
 ## License
 This project is licensed under the [MIT LICENSE](LICENSE).

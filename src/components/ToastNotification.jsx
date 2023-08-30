@@ -1,6 +1,7 @@
+import PropTypes from 'prop-types';
 import { Col, Row, Toast } from 'react-bootstrap';
-import succesImage from '../images/success.png';
 import alertImage from '../images/alert.png';
+import succesImage from '../images/success.png';
 
 export const ToastNotification = ({ title, type, showToast, handleCloseToast }) => {
 
@@ -10,12 +11,12 @@ export const ToastNotification = ({ title, type, showToast, handleCloseToast }) 
                 <Toast onClose={handleCloseToast} show={showToast} bg={type} delay={5000} autohide className="position-fixed bottom-0 end-0 m-3">
                     <Toast.Header>
                         <img
-                            src={ type === 'success' ? succesImage : alertImage }
+                            src={ type === 'success' ? succesImage.string : alertImage.string }
                             className="rounded me-2"
                             alt=""
                             style={{ maxWidth: '5%', height: 'auto' }}
                         />
-                        <strong className="me-auto">{ type }</strong>
+                        <strong className="me-auto" aria-label='strong'>{ type }</strong>
                         <small>Now</small>
                     </Toast.Header>
                     <Toast.Body>
@@ -25,4 +26,11 @@ export const ToastNotification = ({ title, type, showToast, handleCloseToast }) 
             </Col>
         </Row>
     )
+}
+
+ToastNotification.propTypes = {
+    title: PropTypes.string.isRequired,
+    type: PropTypes.string.isRequired,
+    showToast: PropTypes.bool.isRequired,
+    handleCloseToast: PropTypes.func.isRequired,
 }

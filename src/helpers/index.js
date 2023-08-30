@@ -1,3 +1,3 @@
-export * from './dataGifs';
+export * from './getGifs';
 export * from './handleDeleteGif';
 export * from './handleDownloadGif';

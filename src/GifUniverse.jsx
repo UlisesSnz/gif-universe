@@ -40,7 +40,6 @@ export const GifUniverse = () => {
                         <GifGrid
                             category={ category }
                             key={ category }
-                            numberCategories={ categories.length }
                             handleDeleteCategories={ handleDeleteCategories }
                             handleDeleteCategory={ handleDeleteCategory }   
                         />

@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en <GifItem /> debe hacer match con el snapshot 1`] = `
+<div>
+  <div
+    class="col"
+    data-id="123"
+    data-testid="123"
+  >
+    <div
+      class="mb-3 card"
+      style="height: 26rem;"
+    >
+      <img
+        alt="developer"
+        class="card-img-top"
+        src="https://localhost/developer.jpg"
+        style="height: 18rem;"
+      />
+      <div
+        class="card-body bg-dark bg-gradient text-white card-body"
+      >
+        <div
+          class="card-title h5"
+        >
+          developer
+        </div>
+        <button
+          class="btn-light btn-sm me-2 btn btn-primary"
+          data-testid="btnExpand"
+          type="button"
+        >
+          Expand
+        </button>
+        <button
+          class="btn-danger btn-sm btn btn-primary"
+          data-testid="btnDelete"
+          type="button"
+        >
+          Delete
+        </button>
+        <div
+          class="row"
+        >
+          <div
+            class="col-6"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

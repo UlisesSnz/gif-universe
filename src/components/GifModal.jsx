@@ -1,6 +1,7 @@
+import PropTypes from 'prop-types';
 import { Button, Image, Modal } from 'react-bootstrap';
 
-export const GifModal = ({ showModal, title, url, handleCloseModal, handleShowToast }) => {
+export const GifModal = ({ title, url, showModal, handleCloseModal, handleShowToast }) => {
 
     return (
         <Modal show={ showModal } onHide={ handleCloseModal } size="lg" backdrop="static" aria-labelledby="contained-modal-title-vcenter" centered>
@@ -20,4 +21,12 @@ export const GifModal = ({ showModal, title, url, handleCloseModal, handleShowTo
             </Modal.Footer>
         </Modal>
     )
+}
+
+GifModal.propTypes = {
+    title: PropTypes.string.isRequired,
+    url: PropTypes.string.isRequired,
+    showModal: PropTypes.bool.isRequired,
+    handleCloseModal: PropTypes.func.isRequired,
+    handleShowToast: PropTypes.func.isRequired,
 }

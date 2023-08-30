@@ -1,4 +1,4 @@
-export const handleDownloadGif = async(title, url) => {
+export const handleDownloadGif = async (title, url) => {
     try {
         // Create a link (<a>) for the download
         const link = document.createElement('a');
@@ -19,7 +19,7 @@ export const handleDownloadGif = async(title, url) => {
         return 'success';
 
     } catch(error) {
-        console.error('Error while downloading GIF:', error);
+        // console.error('Error while downloading GIF:', error);
         return 'danger';
     }
 }

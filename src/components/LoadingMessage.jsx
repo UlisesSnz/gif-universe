@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 export const LoadingMessage = ({ category }) => {
   return (
     <>
@@ -15,4 +17,8 @@ export const LoadingMessage = ({ category }) => {
         </div>
     </>
   )
+}
+
+LoadingMessage.propTypes = {
+  category: PropTypes.string.isRequired,
 }

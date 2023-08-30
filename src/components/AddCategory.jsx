@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 
 export const AddCategory = ({ onAddNewCategory }) => {
 
@@ -21,7 +22,7 @@ export const AddCategory = ({ onAddNewCategory }) => {
     }
 
     return (
-        <form onSubmit={ onAddCategory } className='mb-md-5 mb-3'>
+        <form onSubmit={ onAddCategory } className='mb-md-5 mb-3' aria-label='form'>
             <div className="form-floating mb-3">
                 <input
                     type="text"
@@ -35,4 +36,8 @@ export const AddCategory = ({ onAddNewCategory }) => {
             </div>
         </form>
     )
+}
+
+AddCategory.propTypes = {
+    onAddNewCategory: PropTypes.func.isRequired,
 }

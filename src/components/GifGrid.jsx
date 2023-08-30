@@ -1,8 +1,9 @@
+import PropTypes from 'prop-types';
 import { NavDropdown, Row } from 'react-bootstrap';
 import { useFetchGifs } from '../hooks/useFetchGifs';
 import { GifItem, LoadingMessage } from './index';
 
-export const GifGrid = ({ category, numberCategories, handleDeleteCategories, handleDeleteCategory }) => {
+export const GifGrid = ({ category, handleDeleteCategories, handleDeleteCategory }) => {
 
     const { dataGifs, isLoading } = useFetchGifs(category);
 
@@ -12,13 +13,13 @@ export const GifGrid = ({ category, numberCategories, handleDeleteCategories, ha
                 isLoading ? <LoadingMessage category={ category } /> :
                 <>
                     {/* Title category and options*/}
-                    <div className="h3 pb-2 mb-4 border-3 border-bottom border-dark-subtle" data-id={category}>
+                    <div className="h3 pb-2 mb-4 border-3 border-bottom border-dark-subtle" data-id={ category } data-testid={ category }>
                         <NavDropdown
                             title={ category.charAt(0).toUpperCase() + category.slice(1) }
                             menuVariant="dark">
-                            <NavDropdown.Item onClick={ handleDeleteCategory }>{ `Delete ${category} category` }</NavDropdown.Item>
+                            <NavDropdown.Item onClick={ handleDeleteCategory } data-testid="btnDeleteCategory">{ `Delete ${category} category` }</NavDropdown.Item>
                             <NavDropdown.Divider />
-                            <NavDropdown.Item onClick={ handleDeleteCategories }>Delete all categories</NavDropdown.Item>
+                            <NavDropdown.Item onClick={ handleDeleteCategories } data-testid="btnDeleteCategories">Delete all categories</NavDropdown.Item>
                         </NavDropdown>
                     </div>
 
@@ -38,4 +39,10 @@ export const GifGrid = ({ category, numberCategories, handleDeleteCategories, ha
             }
         </>
     )
+}
+
+GifGrid.propTypes = {
+    category: PropTypes.string.isRequired,
+    handleDeleteCategories: PropTypes.func.isRequired,
+    handleDeleteCategory: PropTypes.func.isRequired,
 }

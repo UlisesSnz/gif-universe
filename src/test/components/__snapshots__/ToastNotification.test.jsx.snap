@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en <ToastNotification /> debe hacer match con el snapshot 1`] = `
+<div>
+  <div
+    class="row"
+  >
+    <div
+      class="col-6"
+    >
+      <div
+        aria-atomic="true"
+        aria-live="assertive"
+        class="fade toast position-fixed bottom-0 end-0 m-3 bg-success show"
+        role="alert"
+      >
+        <div
+          class="toast-header"
+        >
+          <img
+            alt=""
+            class="rounded me-2"
+            src="string"
+            style="max-width: 5%; height: auto;"
+          />
+          <strong
+            aria-label="strong"
+            class="me-auto"
+          >
+            success
+          </strong>
+          <small>
+            Now
+          </small>
+          <button
+            aria-label="Close"
+            class="btn-close"
+            data-dismiss="toast"
+            type="button"
+          />
+        </div>
+        <div
+          class="toast-body"
+        >
+          developer has been downloaded
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

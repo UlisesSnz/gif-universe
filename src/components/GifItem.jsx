@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 import { Button, Card, Col } from 'react-bootstrap';
 import { GifModal, ToastNotification } from './index';
 import { handleDeleteGif, handleDownloadGif } from '../helpers/index';
@@ -19,13 +20,13 @@ export const GifItem = ({ id, title, url }) => {
     }
 
     return (
-        <Col data-id={ id }>
+        <Col data-id={ id } data-testid={ id } >
             <Card className="mb-3" style={{ height: '26rem' }} >
                 <Card.Img variant="top" src={ url } style={{ height: '18rem' }} alt={ title } />
                 <Card.Body className="card-body bg-dark bg-gradient text-white">
                     <Card.Title >{ title }</Card.Title>
-                    <Button onClick={ handleShowModal } className="btn-light btn-sm me-2">Expand</Button>
-                    <Button onClick={ handleDeleteGif } className="btn-danger btn-sm">Delete</Button>
+                    <Button onClick={ handleShowModal } className="btn-light btn-sm me-2" data-testid="btnExpand">Expand</Button>
+                    <Button onClick={ handleDeleteGif } className="btn-danger btn-sm" data-testid="btnDelete">Delete</Button>
                     <GifModal
                         title={ title }
                         url={ url }
@@ -43,4 +44,10 @@ export const GifItem = ({ id, title, url }) => {
             </Card>
         </Col>
     )
+}
+
+GifItem.propTypes = {
+    id: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    url: PropTypes.string.isRequired,
 }
